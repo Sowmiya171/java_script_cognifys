@@ -1,0 +1,14 @@
+<script>
+  const hour = new Date().getHours();
+  let message = "";
+
+  if (hour < 12) {
+    message = "Good Morning, Sowmiya!";
+  } else if (hour < 18) {
+    message = "Good Afternoon, Sowmiya!";
+  } else {
+    message = "Good Evening, Sowmiya!";
+  }
+
+  alert(message);
+</script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1 - Task 2 (JavaScript)</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color:purple;
+      color: white;
+    }
+    input {
+      padding: 8px;
+      margin: 5px;
+      font-size: 14px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Task 1: Button that Changes Color -->
+  <h2>1. Color Changing Button</h2>
+  <button onclick="changeColor()" id="colorBtn">Click Me!</button>
+
+  <!-- ✅ Task 2: Alert Box Based on Current Time -->
+  <h2>2. Greeting Alert Based on Time</h2>
+  <button onclick="showGreeting()">Show Greeting</button>
+
+  <!-- ✅ Task 3: Simple Calculator -->
+  <h2>3. Simple Calculator - Add Two Numbers</h2>
+  <input type="number" id="num1" placeholder="Enter number 1">
+  <input type="number" id="num2" placeholder="Enter number 2">
+  <button onclick="addNumbers()">Add</button>
+  <p id="result"></p>
+
+  <script>
+    // Task 1: Change Button Color
+    function changeColor() {
+      const btn = document.getElementById("colorBtn");
+      btn.style.backgroundColor = btn.style.backgroundColor === "orange" ? "green" : "orange";
+    }
+
+    // Task 2: Show Time-Based Greeting
+    function showGreeting() {
+      const hour = new Date().getHours();
+      let message = "";
+
+      if (hour < 12) {
+        message = "Good Morning, Sowmiya!";
+      } else if (hour < 18) {
+        message = "Good Afternoon, Sowmiya!";
+      } else {
+        message = "Good Evening, Sowmiya!";
+      }
+
+      alert(message);
+    }
+
+    // Task 3: Add Two Numbers
+    function addNumbers() {
+      const a = parseFloat(document.getElementById("num1").value);
+      const b = parseFloat(document.getElementById("num2").value);
+      const sum = a + b;
+      document.getElementById("result").innerText = "Result: " + sum;
+    }
+  </script>
+
+</body>
+</html>
